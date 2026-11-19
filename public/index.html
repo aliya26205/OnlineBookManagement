@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Book Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>📚 Book Management System</h1>
+            <p>Manage your book collection easily</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="form-section">
+
+            <h2 id="formTitle">Add New Book</h2>
+
+            <form id="bookForm">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter Book Title"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="author"
+                    placeholder="Enter Author Name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="price"
+                    placeholder="Enter Price"
+                    min="0"
+                    step="0.01"
+                    required
+                >
+
+                <div class="form-buttons">
+
+                    <button type="submit" id="submitBtn">
+                        Add Book
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelBtn"
+                        class="cancel-btn"
+                        hidden
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+        <section class="books-section">
+
+            <div class="section-heading">
+                <h2>Available Books</h2>
+                <span id="bookCount">0 Books</span>
+            </div>
+
+            <div id="bookList" class="book-list">
+                Loading books...
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Online Book Management System | Node.js & Express.js</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

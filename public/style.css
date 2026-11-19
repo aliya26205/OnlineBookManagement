@@ -1,0 +1,204 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+}
+
+/* Header */
+header {
+    background: #263b63;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+header p {
+    color: #dce5f5;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+/* Form section */
+.form-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    margin-bottom: 35px;
+}
+
+.form-section h2,
+.books-section h2 {
+    margin-bottom: 20px;
+    color: #263b63;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #263b63;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    background: #263b63;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.cancel-btn {
+    background: #777;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Message */
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+/* Books section */
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#bookCount {
+    background: #dce5f5;
+    color: #263b63;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Book cards */
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    border-left: 5px solid #263b63;
+}
+
+.book-card h3 {
+    color: #263b63;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.book-card p {
+    margin: 8px 0;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+.book-price {
+    font-size: 19px;
+    font-weight: bold;
+    color: #198754;
+    margin: 15px 0;
+}
+
+.book-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.edit-btn {
+    background: #e0a800;
+    color: #222;
+}
+
+.delete-btn {
+    background: #dc3545;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    margin-top: 40px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .section-heading {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
